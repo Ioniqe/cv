@@ -16,13 +16,24 @@ import sun from './visuals/planets/sun.svg';
 
 import dolphin from './visuals/animals/dolphin.svg';
 
+import ts_js from './visuals/logo_circles/ts_js.svg';
+import react from './visuals/logo_circles/react.svg';
+import angular from './visuals/logo_circles/angular.svg';
+
+import python from './visuals/logo_circles/python.svg';
+import java from './visuals/logo_circles/java.svg';
+import c_plus_plus from './visuals/logo_circles/c++.svg';
+
+import adobe from './visuals/logo_circles/adobe.svg';
+import sql from './visuals/logo_circles/sql.svg';
+import c_sharp from './visuals/logo_circles/c_sharp.svg';
+
 import { motion } from 'framer-motion';
 import { Button } from '@material-ui/core';
 import { useStylesGeneral } from './styles/Styles';
 
 function App() {
   const style = useStylesGeneral();
-
 
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
@@ -265,6 +276,30 @@ function App() {
       >
         <Button className={style.seeListButton} variant='outlined' onClick={e => scroll.scrollTo(window.screen.width * 1.9, { duration: 2000, smooth: 'easeInOutQuint' })}>see list</Button>
       </motion.div>
+
+      {/* -----------------------------SKILLS LIST---------------------------------- */}
+
+      <div style={{ margin: 'auto', marginTop: '182vw' }}>
+
+        <div style={{ position: 'relative', display: 'inlineBlock' }}>
+          <img alt="ts_js" src={ts_js} style={{ position: 'relative', height: '8vw' }} />
+          <img alt="react" src={react} style={{ position: 'relative', height: '8vw', marginLeft: '2vw', marginRight: '2vw' }} />
+          <img alt="angular" src={angular} style={{ position: 'relative', height: '8vw' }} />
+        </div>
+
+        <div style={{ position: 'relative', display: 'inlineBlock', marginTop: '1vw', marginBottom: '1vw' }}>
+          <img alt="python" src={python} style={{ position: 'relative', height: '8vw' }} />
+          <img alt="java" src={java} style={{ position: 'relative', height: '8vw', marginLeft: '2vw', marginRight: '2vw' }} />
+          <img alt="c_plus_plus" src={c_plus_plus} style={{ position: 'relative', height: '8vw' }} />
+        </div>
+
+        <div style={{ position: 'relative', display: 'inlineBlock' }}>
+          <img alt="adobe" src={adobe} style={{ position: 'relative', height: '8vw' }} />
+          <img alt="sql" src={sql} style={{ position: 'relative', height: '8vw', marginLeft: '2vw', marginRight: '2vw' }} />
+          <img alt="c_sharp" src={c_sharp} style={{ position: 'relative', height: '8vw' }} />
+        </div>
+
+      </div>
 
     </div>
   );
