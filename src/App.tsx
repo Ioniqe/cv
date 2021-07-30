@@ -12,10 +12,17 @@ import planet_yellow from './visuals/planets/planet_yellow.svg';
 import planet_yellow_v2 from './visuals/planets/planet_yellow_v2.svg';
 import planet_pink_yellow_small from './visuals/planets/planet_pink_yellow_small.svg';
 import planet_pink from './visuals/planets/planet_pink.svg';
+import sun from './visuals/planets/sun.svg';
+
+import dolphin from './visuals/animals/dolphin.svg';
 
 import { motion } from 'framer-motion';
+import { Button } from '@material-ui/core';
+import { useStylesGeneral } from './styles/Styles';
 
 function App() {
+  const style = useStylesGeneral();
+
 
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
@@ -40,6 +47,21 @@ function App() {
       }
     }
   }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  var Scroll = require('react-scroll');
+  var scroll = Scroll.animateScroll;
+
+  // scroll.scrollTo(100, options);
+
+  // let scrollToBottom = (): void => {
+  //   scroll.scrollToBottom();
+  // }
+
 
   return (
     <div className='App'>
@@ -157,13 +179,9 @@ function App() {
 
         <motion.img alt="planet_yellow_1" src={planet_yellow}
           style={{ position: 'absolute', left: '2.5vw', top: '35vw', height: '8vw', opacity: 1 - offsetY * 0.01, y: offsetY * 1.5, x: offsetY * 1.2 }}
-          initial={{ scale: 0 }}
-          animate={{ rotate: -360, scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 200,
-            damping: 50
-          }} />
+          animate={{ rotate: 360 }}
+          transition={{ ease: "linear", duration: 40, repeat: Infinity }}
+        />
 
         <motion.img alt="planet_pink_yellow_small" src={planet_pink_yellow_small}
           style={{ position: 'absolute', right: '7vw', top: '28vw', height: '6vw', opacity: 1 - offsetY * 0.005, y: -offsetY * 1.7, x: offsetY * 1.1, rotate: 0.7 * offsetY }}
@@ -207,6 +225,47 @@ function App() {
         />
 
       </div>
+
+      <motion.div
+        style={{ position: 'relative', top: '32vw', left: '-1vw' }}
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{
+          type: "tween",
+          duration: 2
+        }}
+      >
+        <Button className={style.button} variant='outlined' onClick={e => scroll.scrollTo(window.screen.width * 0.95, { duration: 2000, smooth: 'easeInOutQuint' })}>skills</Button>
+      </motion.div>
+
+      {/* -----------------------------SKILLS---------------------------------- */}
+
+      <div style={{ pointerEvents: 'none' }}>
+        <h1 style={{ position: 'relative', fontSize: '5vw', letterSpacing: '0.2em', top: '105vw', color: 'rgb(248, 163, 28)', textTransform: 'uppercase' }} >Skills</h1>
+        <h3 style={{ position: 'relative', fontSize: '1.2vw', letterSpacing: '0.45em', top: '102vw', color: 'rgb(248, 163, 28)', textTransform: 'uppercase' }} >(besides googling)</h3>
+
+        <motion.img alt="dolphin" src={dolphin}
+          style={{ position: 'absolute', left: '4vw', top: '125vw', height: '9vw' }}
+          animate={{ rotate: 5 }}
+          transition={{ repeatType: "reverse", duration: 3, repeat: Infinity, }}
+        />
+
+        <motion.img alt="sun" src={sun}
+          style={{ position: 'absolute', right: '18vw', top: '105vw', height: '6vw' }}
+          animate={{ rotate: 45 }}
+          transition={{ repeatType: "reverse", duration: 2, repeat: Infinity, }}
+        />
+
+      </div>
+
+      <motion.div
+        style={{ position: 'relative', top: '105vw' }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <Button className={style.seeListButton} variant='outlined' onClick={e => scroll.scrollTo(window.screen.width * 1.9, { duration: 2000, smooth: 'easeInOutQuint' })}>see list</Button>
+      </motion.div>
+
     </div>
   );
 }
