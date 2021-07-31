@@ -28,6 +28,8 @@ import adobe from './visuals/logo_circles/adobe.svg';
 import sql from './visuals/logo_circles/sql.svg';
 import c_sharp from './visuals/logo_circles/c_sharp.svg';
 
+import circle_purple from './visuals/circles/circle_purple.svg';
+
 import { motion } from 'framer-motion';
 import { Button } from '@material-ui/core';
 import { useStylesGeneral } from './styles/Styles';
@@ -66,13 +68,6 @@ function App() {
 
   var Scroll = require('react-scroll');
   var scroll = Scroll.animateScroll;
-
-  // scroll.scrollTo(100, options);
-
-  // let scrollToBottom = (): void => {
-  //   scroll.scrollToBottom();
-  // }
-
 
   return (
     <div className='App'>
@@ -258,7 +253,7 @@ function App() {
         <motion.img alt="dolphin" src={dolphin}
           style={{ position: 'absolute', left: '4vw', top: '125vw', height: '9vw' }}
           animate={{ rotate: 5 }}
-          transition={{ repeatType: "reverse", duration: 3, repeat: Infinity, }}
+          transition={{ repeatType: "reverse", duration: 2, repeat: Infinity, }}
         />
 
         <motion.img alt="sun" src={sun}
@@ -279,27 +274,78 @@ function App() {
 
       {/* -----------------------------SKILLS LIST---------------------------------- */}
 
-      <div style={{ margin: 'auto', marginTop: '182vw' }}>
+      <div style={{ marginTop: '182vw', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
-        <div style={{ position: 'relative', display: 'inlineBlock' }}>
-          <img alt="ts_js" src={ts_js} style={{ position: 'relative', height: '8vw' }} />
-          <img alt="react" src={react} style={{ position: 'relative', height: '8vw', marginLeft: '2vw', marginRight: '2vw' }} />
-          <img alt="angular" src={angular} style={{ position: 'relative', height: '8vw' }} />
+        <div className={style.circleContainer}>
+          <div className={style.circle}>
+            <figure className={style.circleFront} style={{ width: '100%', height: '100%', position: 'absolute', margin: 0 }}>
+              <img alt="ts_js" src={ts_js} />
+            </figure>
+            <figure className={style.circleBack} style={{ width: '100%', height: '100%', position: 'absolute', margin: 0 }}>
+              <div style={{position: 'relative', textAlign: 'center'}}>
+                <img alt="circle_purple" src={circle_purple} />
+                <p style={{ position: 'absolute',  fontSize: '1vw', width: '5vw', height: '5vw', margin: 0, top: '50%', left: '50%' , transform: 'translate(-50%, -40%)'}}>Typescript and Javascript</p>
+              </div>
+            </figure>
+          </div>
         </div>
 
-        <div style={{ position: 'relative', display: 'inlineBlock', marginTop: '1vw', marginBottom: '1vw' }}>
+        {/* <div style={{ position: 'relative', display: 'inlineBlock' }}>
+
+          <div className={style.circleContainer}>
+            <div className={style.circleFront}>
+              <img alt="ts_js" src={ts_js} />
+            </div>
+            <div className={style.circleBack}>
+              <img alt="circle_purple" src={circle_purple} />
+            </div>
+          </div>
+
+          <div style={{
+            marginLeft: '10vw',
+            marginRight: '10vw',
+          }}>
+            <div className={style.circleContainer}>
+              <div className={style.circleFront}>
+                <img alt="react" src={react} style={{ height: '8vw', marginLeft: '2vw', marginRight: '2vw' }} />
+              </div>
+              <div className={style.circleBack}>
+                <img alt="circle_purple" src={circle_purple} style={{ height: '8vw', marginLeft: '2vw', marginRight: '2vw' }} />
+              </div>
+            </div>
+          </div>
+
+          <div style={{
+            marginLeft: '10vw',
+            marginRight: '10vw',
+          }}>
+            <div className={style.circleContainer}>
+              <div className={style.circleFront}>
+                <img alt="angular" src={angular} style={{ height: '8vw' }} />
+              </div>
+              <div className={style.circleBack}>
+                <img alt="circle_purple" src={circle_purple} />
+              </div>
+            </div>
+          </div>
+
+        </div> */}
+
+        {/* <div style={{ position: 'relative', display: 'inlineBlock', marginTop: '1vw', marginBottom: '1vw' }}>
           <img alt="python" src={python} style={{ position: 'relative', height: '8vw' }} />
           <img alt="java" src={java} style={{ position: 'relative', height: '8vw', marginLeft: '2vw', marginRight: '2vw' }} />
           <img alt="c_plus_plus" src={c_plus_plus} style={{ position: 'relative', height: '8vw' }} />
-        </div>
+        </div> */}
 
-        <div style={{ position: 'relative', display: 'inlineBlock' }}>
+        {/* <div style={{ position: 'relative', display: 'inlineBlock' }}>
           <img alt="adobe" src={adobe} style={{ position: 'relative', height: '8vw' }} />
           <img alt="sql" src={sql} style={{ position: 'relative', height: '8vw', marginLeft: '2vw', marginRight: '2vw' }} />
           <img alt="c_sharp" src={c_sharp} style={{ position: 'relative', height: '8vw' }} />
-        </div>
+        </div> */}
 
       </div>
+
+
 
     </div>
   );
