@@ -29,10 +29,20 @@ import sql from './visuals/logo_circles/sql.svg';
 import c_sharp from './visuals/logo_circles/c_sharp.svg';
 
 import circle_purple from './visuals/circles/circle_purple.svg';
+import circle_orange from './visuals/circles/circle_orange.svg';
+import circle_pink from './visuals/circles/circle_pink.svg';
+import circle_yellow from './visuals/circles/circle_yellow.svg';
+import circle_blue from './visuals/circles/circle_blue.svg';
+
+import circle_green from './visuals/circles/circle_green.svg';
+import circle_hot_blue from './visuals/circles/circle_hot_blue.svg';
+import circle_hot_orange from './visuals/circles/circle_hot_orange.svg';
+import circle_hot_purple from './visuals/circles/circle_hot_purple.svg';
 
 import { motion } from 'framer-motion';
 import { Button } from '@material-ui/core';
 import { useStylesGeneral } from './styles/Styles';
+import Coin from './components/Coin';
 
 function App() {
   const style = useStylesGeneral();
@@ -274,78 +284,39 @@ function App() {
 
       {/* -----------------------------SKILLS LIST---------------------------------- */}
 
-      <div style={{ marginTop: '182vw', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ marginTop: '182vw', display: 'grid', justifyContent: 'center', alignItems: 'center' }}>
 
-        <div className={style.circleContainer}>
-          <div className={style.circle}>
-            <figure className={style.circleFront} style={{ width: '100%', height: '100%', position: 'absolute', margin: 0 }}>
-              <img alt="ts_js" src={ts_js} />
-            </figure>
-            <figure className={style.circleBack} style={{ width: '100%', height: '100%', position: 'absolute', margin: 0 }}>
-              <div style={{position: 'relative', textAlign: 'center'}}>
-                <img alt="circle_purple" src={circle_purple} />
-                <p style={{ position: 'absolute',  fontSize: '1vw', width: '5vw', height: '5vw', margin: 0, top: '50%', left: '50%' , transform: 'translate(-50%, -40%)'}}>Typescript and Javascript</p>
-              </div>
-            </figure>
+        <div style={{ position: 'relative', display: 'flex' }}>
+          <Coin front={ts_js} back={circle_blue} text={'Typescript and Javascript'} />
+         
+          <div style={{ marginLeft: '1vw', marginRight: '1vw' }}>
+            <Coin front={react} back={circle_purple} text={'React'} />
           </div>
+         
+          <Coin front={angular} back={circle_orange} text={'Angular'} />
         </div>
 
-        {/* <div style={{ position: 'relative', display: 'inlineBlock' }}>
-
-          <div className={style.circleContainer}>
-            <div className={style.circleFront}>
-              <img alt="ts_js" src={ts_js} />
-            </div>
-            <div className={style.circleBack}>
-              <img alt="circle_purple" src={circle_purple} />
-            </div>
+        <div style={{ position: 'relative', display: 'flex', marginTop: '1vw', marginBottom: '1vw' }}>
+          <Coin front={python} back={circle_pink} text={'Python'} />
+          
+          <div style={{ marginLeft: '1vw', marginRight: '1vw' }}>
+            <Coin front={java} back={circle_yellow} text={'Java'} />
           </div>
+          
+          <Coin front={c_plus_plus} back={circle_green} text={'C++'} />
+        </div>
 
-          <div style={{
-            marginLeft: '10vw',
-            marginRight: '10vw',
-          }}>
-            <div className={style.circleContainer}>
-              <div className={style.circleFront}>
-                <img alt="react" src={react} style={{ height: '8vw', marginLeft: '2vw', marginRight: '2vw' }} />
-              </div>
-              <div className={style.circleBack}>
-                <img alt="circle_purple" src={circle_purple} style={{ height: '8vw', marginLeft: '2vw', marginRight: '2vw' }} />
-              </div>
-            </div>
+        <div style={{ position: 'relative', display: 'flex' }}>
+          <Coin front={adobe} back={circle_hot_orange} text={'Adobe'} />
+          
+          <div style={{ marginLeft: '1vw', marginRight: '1vw' }}>
+            <Coin front={sql} back={circle_hot_purple} text={'SQL'} />
           </div>
-
-          <div style={{
-            marginLeft: '10vw',
-            marginRight: '10vw',
-          }}>
-            <div className={style.circleContainer}>
-              <div className={style.circleFront}>
-                <img alt="angular" src={angular} style={{ height: '8vw' }} />
-              </div>
-              <div className={style.circleBack}>
-                <img alt="circle_purple" src={circle_purple} />
-              </div>
-            </div>
-          </div>
-
-        </div> */}
-
-        {/* <div style={{ position: 'relative', display: 'inlineBlock', marginTop: '1vw', marginBottom: '1vw' }}>
-          <img alt="python" src={python} style={{ position: 'relative', height: '8vw' }} />
-          <img alt="java" src={java} style={{ position: 'relative', height: '8vw', marginLeft: '2vw', marginRight: '2vw' }} />
-          <img alt="c_plus_plus" src={c_plus_plus} style={{ position: 'relative', height: '8vw' }} />
-        </div> */}
-
-        {/* <div style={{ position: 'relative', display: 'inlineBlock' }}>
-          <img alt="adobe" src={adobe} style={{ position: 'relative', height: '8vw' }} />
-          <img alt="sql" src={sql} style={{ position: 'relative', height: '8vw', marginLeft: '2vw', marginRight: '2vw' }} />
-          <img alt="c_sharp" src={c_sharp} style={{ position: 'relative', height: '8vw' }} />
-        </div> */}
+          
+          <Coin front={c_sharp} back={circle_hot_blue} text={'C#'} />
+        </div>
 
       </div>
-
-
 
     </div>
   );
