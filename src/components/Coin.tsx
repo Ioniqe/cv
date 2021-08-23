@@ -9,20 +9,22 @@ interface CoinProps {
 function Coin({ front, back, text }: CoinProps) {
   const style = useStylesGeneral();
 
-  let position = text === 'Typescript and Javascript' ? '56%' : '70%'
+  let position_top = text.length > 10 ? '52%' : '65%'
+  let position_left = text.length > 10 ? '47%' : '50%'
+  let font_size = text.length > 10 ? '1.2vw' : '1.5vw'
 
   return (
     <div className={style.circleContainer}>
       <div className={style.circle}>
-        <figure className={style.circleFront} style={{ width: '100%', height: '100%', position: 'absolute', margin: 0 }}>
+        <figure className={style.circleFront} style={{position: 'absolute', margin: 0 }}>
           <img alt="ts_js" src={front} />
         </figure>
-        <figure className={style.circleBack} style={{ width: '100%', height: '100%', position: 'absolute', margin: 0 }}>
+        <figure className={style.circleBack} style={{position: 'absolute', margin: 0 }}>
           <div style={{ position: 'relative', textAlign: 'center' }}>
             <img alt="circle_purple" src={back} />
             <p style={{
-              position: 'absolute', fontSize: '1vw', width: '5vw', height: '5vw',
-              margin: 0, top: position, left: '50%', transform: 'translate(-50%, -50%)',
+              position: 'absolute', fontSize: font_size, width: '5vw', height: '5vw',
+              margin: 0, top: position_top, left: position_left, transform: 'translate(-50%, -50%)',
               color: 'rgb(27, 33, 112)'
             }}>{text}</p>
           </div>

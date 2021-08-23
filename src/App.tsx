@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 
-import background from './visuals/background.svg';
+import background from './visuals/background2.svg';
 import planet_pink_yellow from './visuals/planets/planet_pink_yellow.svg';
 import planet_yellow_small from './visuals/planets/planet_yellow_small.svg';
 import falling from './visuals/planets/falling.svg';
@@ -38,6 +38,12 @@ import circle_green from './visuals/circles/circle_green.svg';
 import circle_hot_blue from './visuals/circles/circle_hot_blue.svg';
 import circle_hot_orange from './visuals/circles/circle_hot_orange.svg';
 import circle_hot_purple from './visuals/circles/circle_hot_purple.svg';
+
+import blue_whale from './visuals/animals/blue_whale.svg';
+import purple_whale from './visuals/animals/purple_whale.svg';
+import pink_fish from './visuals/animals/pink_fish.svg';
+import pink_octopus from './visuals/animals/pink_octopus.svg';
+import yellow_octopus from './visuals/animals/yellow_octopus.svg';
 
 import { motion } from 'framer-motion';
 import { Button } from '@material-ui/core';
@@ -279,8 +285,19 @@ function App() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        <Button className={style.seeListButton} variant='outlined' onClick={e => scroll.scrollTo(window.screen.width * 1.9, { duration: 2000, smooth: 'easeInOutQuint' })}>see list</Button>
+        <Button className={style.seeListButton} variant='outlined' onClick={e => scroll.scrollTo(window.screen.width * 1.95, { duration: 2000, smooth: 'easeInOutQuint' })}>see list</Button>
       </motion.div>
+
+      {/* -----------------------------OCEAN ANIMALS---------------------------------- */}
+
+      <div style={{ position: 'absolute', width: '100%', height: '100%', pointerEvents: 'none', top: '150vw' }}>
+        <motion.img alt="purple_whale" src={purple_whale}
+          style={{ position: 'absolute', left: '2.5vw', top: '11vw', height: '14vw', rotate: '15deg' }} />
+
+        <motion.img alt="pink_fish_1" src={pink_fish}
+          style={{ position: 'absolute', right: '11vw', top: '16vw', height: '4vw', rotate: '10deg' }} />
+
+      </div>
 
       {/* -----------------------------SKILLS LIST---------------------------------- */}
 
@@ -288,38 +305,81 @@ function App() {
 
         <div style={{ position: 'relative', display: 'flex' }}>
           <Coin front={ts_js} back={circle_blue} text={'Typescript and Javascript'} />
-         
+
           <div style={{ marginLeft: '1vw', marginRight: '1vw' }}>
             <Coin front={react} back={circle_purple} text={'React'} />
           </div>
-         
+
           <Coin front={angular} back={circle_orange} text={'Angular'} />
         </div>
 
         <div style={{ position: 'relative', display: 'flex', marginTop: '1vw', marginBottom: '1vw' }}>
           <Coin front={python} back={circle_pink} text={'Python'} />
-          
+
           <div style={{ marginLeft: '1vw', marginRight: '1vw' }}>
             <Coin front={java} back={circle_yellow} text={'Java'} />
           </div>
-          
+
           <Coin front={c_plus_plus} back={circle_green} text={'C++'} />
         </div>
 
         <div style={{ position: 'relative', display: 'flex' }}>
-          <Coin front={adobe} back={circle_hot_orange} text={'Adobe'} />
-          
+          <Coin front={adobe} back={circle_hot_orange} text={'Photoshop and Illustrator'} />
+
           <div style={{ marginLeft: '1vw', marginRight: '1vw' }}>
             <Coin front={sql} back={circle_hot_purple} text={'SQL'} />
           </div>
-          
+
           <Coin front={c_sharp} back={circle_hot_blue} text={'C#'} />
         </div>
 
       </div>
+
+      <Button className={style.button2} variant='outlined' onClick={e => scroll.scrollTo(window.screen.width * 2.587, { duration: 2000, smooth: 'easeInOutQuint' })}>other details</Button>
+
+      {/* -----------------------------OCEAN ANIMALS---------------------------------- */}
+
+      <div style={{ position: 'absolute', width: '100%', pointerEvents: 'none' }}>
+
+        <motion.img alt="pink_fish_2" src={pink_fish}
+          style={{ position: 'absolute', left: '1vw', top: '-41vw', height: '10vw', transform: 'rotateY(180deg)' }} />
+
+        <motion.img alt="yellow_octopus" src={yellow_octopus}
+          style={{ position: 'absolute', left: '1.3vw', top: '-14vw', height: '20vw' }} />
+
+        <motion.img alt="pink_octopus" src={pink_octopus}
+          style={{ position: 'absolute', left: '16vw', top: '2.5vw', height: '10vw' }} />
+
+        <motion.img alt="blue_whale" src={blue_whale}
+          style={{ position: 'absolute', right: '3vw', top: '-4vw', height: '14vw' }} />
+
+      </div>
+
+      {/* -----------------------------OTHER DETAILS---------------------------------- */}
+
+      <div style={{ position: 'absolute', width: '100%', top: '281vw' }}>
+
+        <div style={{ position: 'absolute', left: '8vw' }}>
+          <h2 style={{ left: '7vw', color: 'rgb(248, 128, 21)', textDecorationLine: 'underline' }}>EDUCATION</h2>
+          <h2 style={{ color: 'rgb(248, 128, 21)', top: '2vw', wordWrap: 'break-word', width: '20vw' }}>Master's Degree in Software Engineering at UBB, 2021-2023</h2>
+          <h2 style={{ color: 'rgb(248, 128, 21)', top: '2vw', wordWrap: 'break-word', width: '20vw' }}>Bachelor's Degree in Computer Science at TUCN, 2017-2021</h2>
+          <h2 style={{ color: 'rgb(248, 128, 21)', top: '2vw', wordWrap: 'break-word', width: '20vw' }}>Matematica - Informatica Colegiul National "Emil Racovita"</h2>
+        </div>
+
+        <div style={{ position: 'absolute', right: '8vw' }}>
+          <h2 style={{ color: 'rgb(248, 128, 21)', textDecorationLine: 'underline' }}>EXPERIENCE</h2>
+          <h2 style={{ color: 'rgb(248, 128, 21)', top: '2vw', wordWrap: 'break-word', width: '20vw' }}>Internship at .msg on React with Typescript, summer of 2020</h2>
+          <Button className={style.githubButton} variant='outlined' onClick={e => window.open('https://github.com/Ioniqe', '_blank') }>github</Button>
+        </div>
+
+      </div>
+
 
     </div>
   );
 }
 
 export default App;
+
+
+//TODO put an informative bubble with animation to inform user that the coin can be clicked / hovered on
