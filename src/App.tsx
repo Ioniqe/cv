@@ -292,10 +292,16 @@ function App() {
 
       <div style={{ position: 'absolute', width: '100%', height: '100%', pointerEvents: 'none', top: '150vw' }}>
         <motion.img alt="purple_whale" src={purple_whale}
-          style={{ position: 'absolute', left: '2.5vw', top: '11vw', height: '14vw', rotate: '15deg' }} />
+          style={{ position: 'absolute', left: '2.5vw', top: '13vw', height: '14vw' }}
+          animate={{ rotate: 5 }}
+          transition={{ repeatType: "reverse", duration: 2, repeat: Infinity, }}
+        />
 
         <motion.img alt="pink_fish_1" src={pink_fish}
-          style={{ position: 'absolute', right: '11vw', top: '16vw', height: '4vw', rotate: '10deg' }} />
+          style={{ position: 'absolute', right: '11vw', top: '16vw', height: '4vw' }}
+          animate={{ rotate: 10 }}
+          transition={{ repeatType: "reverse", duration: 0.5, repeat: Infinity, }}
+        />
 
       </div>
 
@@ -342,16 +348,29 @@ function App() {
       <div style={{ position: 'absolute', width: '100%', pointerEvents: 'none' }}>
 
         <motion.img alt="pink_fish_2" src={pink_fish}
-          style={{ position: 'absolute', left: '1vw', top: '-41vw', height: '10vw', transform: 'rotateY(180deg)' }} />
+          style={{ position: 'absolute', left: '1vw', top: '-44vw', height: '10vw' }}
+          initial={{ rotateY: '180deg' }}
+          animate={{ rotate: 7 }}
+          transition={{ repeatType: "reverse", duration: 1.5, repeat: Infinity, }}
+        />
 
         <motion.img alt="yellow_octopus" src={yellow_octopus}
-          style={{ position: 'absolute', left: '1.3vw', top: '-14vw', height: '20vw' }} />
+          style={{ position: 'absolute', left: '1.3vw', top: '-17vw', height: '20vw' }}
+          animate={{ rotate: 5 }}
+          transition={{ repeatType: "reverse", duration: 4, repeat: Infinity, }}
+        />
 
         <motion.img alt="pink_octopus" src={pink_octopus}
-          style={{ position: 'absolute', left: '16vw', top: '2.5vw', height: '10vw' }} />
+          style={{ position: 'absolute', left: '17vw', top: '2.5vw', height: '10vw' }}
+          animate={{ rotate: -5 }}
+          transition={{ repeatType: "reverse", duration: 1, repeat: Infinity, }}
+        />
 
         <motion.img alt="blue_whale" src={blue_whale}
-          style={{ position: 'absolute', right: '3vw', top: '-4vw', height: '14vw' }} />
+          style={{ position: 'absolute', right: '3vw', top: '-6vw', height: '14vw' }}
+          animate={{ rotate: 5 }}
+          transition={{ repeatType: "reverse", duration: 3, repeat: Infinity, }}
+        />
 
       </div>
 
@@ -359,17 +378,17 @@ function App() {
 
       <div style={{ position: 'absolute', width: '100%', top: '281vw' }}>
 
-        <div style={{ position: 'absolute', left: '8vw' }}>
-          <h2 style={{ left: '7vw', color: 'rgb(248, 128, 21)', textDecorationLine: 'underline' }}>EDUCATION</h2>
-          <h2 style={{ color: 'rgb(248, 128, 21)', top: '2vw', wordWrap: 'break-word', width: '20vw' }}>Master's Degree in Software Engineering at UBB, 2021-2023</h2>
-          <h2 style={{ color: 'rgb(248, 128, 21)', top: '2vw', wordWrap: 'break-word', width: '20vw' }}>Bachelor's Degree in Computer Science at TUCN, 2017-2021</h2>
-          <h2 style={{ color: 'rgb(248, 128, 21)', top: '2vw', wordWrap: 'break-word', width: '20vw' }}>Matematica - Informatica Colegiul National "Emil Racovita"</h2>
+        <div style={{ position: 'absolute', left: '8vw', fontSize: '1.2vw', fontWeight: 'bold', wordWrap: 'break-word', width: '25vw' }}>
+          <p style={{ left: '7vw', color: 'rgb(248, 128, 21)', textDecorationLine: 'underline', fontSize: '1.5vw' }}>EDUCATION</p>
+          <p style={{ color: 'rgb(248, 128, 21)', top: '2vw' }}>Master's Degree in Software Engineering at UBB, 2021-2023</p>
+          <p style={{ color: 'rgb(248, 128, 21)', top: '2vw' }}>Bachelor's Degree in Computer Science at TUCN, 2017-2021</p>
+          <p style={{ color: 'rgb(248, 128, 21)', top: '2vw' }}>Matematica - Informatica at Colegiul National "Emil Racovita"</p>
         </div>
 
-        <div style={{ position: 'absolute', right: '8vw' }}>
-          <h2 style={{ color: 'rgb(248, 128, 21)', textDecorationLine: 'underline' }}>EXPERIENCE</h2>
-          <h2 style={{ color: 'rgb(248, 128, 21)', top: '2vw', wordWrap: 'break-word', width: '20vw' }}>Internship at .msg on React with Typescript, summer of 2020</h2>
-          <Button className={style.githubButton} variant='outlined' onClick={e => window.open('https://github.com/Ioniqe', '_blank') }>github</Button>
+        <div style={{ position: 'absolute', right: '8vw', fontSize: '1.2vw', fontWeight: 'bold', wordWrap: 'break-word', width: '25vw' }}>
+          <p style={{ color: 'rgb(248, 128, 21)', textDecorationLine: 'underline', fontSize: '1.5vw' }}>EXPERIENCE</p>
+          <p style={{ color: 'rgb(248, 128, 21)', top: '2vw' }}>Internship at .msg on React with Typescript, summer of 2020</p>
+          <Button className={style.githubButton} variant='outlined' onClick={e => window.open('https://github.com/Ioniqe', '_blank')}>github</Button>
         </div>
 
       </div>
