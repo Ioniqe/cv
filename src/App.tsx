@@ -395,7 +395,7 @@ function App() {
         </Element>
       </div>
 
-      <Button className={style.button2} variant='outlined' onClick={e => scroll.scrollToBottom({ duration: 4000, smooth: 'easeInOutQuint' })}>other details</Button>
+      <Button className={style.button2} variant='outlined' onClick={e => scroll.scrollToBottom({ duration: 2000, smooth: 'easeInOutQuint' })}>other details</Button>
 
       {/* -----------------------------OCEAN ANIMALS---------------------------------- */}
 
