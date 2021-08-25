@@ -14,3 +14,396 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
+
+.headerr {
+    /* background-image: url(visuals/background2.svg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: top; */
+    /* background-size: cover; */
+    height: 310vw;
+    background-position: top center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(visuals/background2.svg);
+}
+
+.title {
+    width: 55vw;
+    margin: auto;
+    margin-top: 20vw;
+}
+
+.planetPinkYellow {
+    position: absolute;
+    left: 9vw;
+    top: 4vw;
+    height: 11vw;
+}
+
+.planetYellowSmall_1 {
+    position: absolute;
+    left: 2vw;
+    top: 7vw;
+    height: 3vw;
+}
+
+.planetYellow_1 {
+    position: absolute;
+    left: 2.5vw;
+    top: 35vw;
+    height: 8vw;
+}
+
+.falling {
+    position: absolute;
+    left: 1.1vw;
+    top: 15vw;
+    height: 9vw;
+}
+
+.button_1 {
+    position: relative;
+    top: 32vw;
+    left: -1vw;
+}
+
+.planetYellowSmall_2 {
+    position: absolute;
+    left: 19vw;
+    top: 20vw;
+    height: 2vw;
+}
+
+.planetBlueSmall_1 {
+    position: absolute;
+    left: 25vw;
+    top: 15vw;
+    height: 2.5vw;
+}
+
+.skillsTitle {
+    margin-top: 110vw;
+}
+
+.sun {
+    position: absolute;
+    right: 18vw;
+    top: 105vw;
+    height: 6vw;
+}
+
+.dolphin {
+    position: absolute;
+    left: 4vw;
+    top: 125vw;
+    height: 9vw;
+}
+
+.planetBlue_v2 {
+    position: absolute;
+    left: 14vw;
+    top: 28vw;
+    height: 5vw;
+}
+
+.planetBlueRings {
+    position: absolute;
+    right: 9vw;
+    top: 10vw;
+    height: 10vw;
+}
+
+.planetYellow_v2 {
+    position: absolute;
+    right: 30vw;
+    top: 7vw;
+    height: 2vw;
+}
+
+.planetPinkYellowSmall {
+    position: absolute;
+    right: 7vw;
+    top: 28vw;
+    height: 6vw;
+}
+
+.planetPink_1 {
+    position: absolute;
+    right: 15vw;
+    top: 38vw;
+    height: 4.5vw;
+}
+
+.planetYellow_2 {
+    position: absolute;
+    right: 15vw;
+    top: 23vw;
+    height: 3vw;
+}
+
+.planetYellow_3 {
+    position: absolute;
+    right: 26vw;
+    top: 46vw;
+    height: 5vw;
+}
+
+.planetPink_2 {
+    position: absolute;
+    left: 25vw;
+    top: 36vw;
+    height: 2.5vw;
+}
+
+.planetBlueSmall_2 {
+    position: absolute;
+    right: 35vw;
+    top: 35vw;
+    height: 4vw;
+}
+
+.purpleWhale {
+    position: absolute;
+    left: 2.5vw;
+    top: 13vw;
+    height: 14vw;
+}
+
+.pinkFish_1 {
+    position: absolute;
+    right: 11vw;
+    top: 16vw;
+    height: 4vw;
+}
+
+.yellowOctopus {
+    position: absolute;
+    left: 1.3vw;
+    top: -17vw;
+    height: 20vw;
+}
+
+.pinkOctopus {
+    position: absolute;
+    left: 17vw;
+    top: 2.5vw;
+    height: 10vw;
+}
+
+.blueWhale {
+    position: absolute;
+    right: 3vw;
+    top: -6vw;
+    height: 14vw;
+}
+
+.educationStyle {
+    position: absolute;
+    left: 8vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+    word-wrap: break-word;
+    width: 25vw;
+}
+
+.experienceStyle {
+    position: absolute;
+    right: 8vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+    word-wrap: break-word;
+    width: 25vw;
+}
+
+.pinkFish_2 {
+    position: absolute;
+    left: 1vw;
+    top: -44vw;
+    height: 10vw;
+}
+
+
+/* -------------responsive--------------- */
+
+@media only screen and (max-width: 1024px) {
+    .headerr {
+        height: 560vw;
+        background-position: top center;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(visuals/background_tablet.svg);
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .headerr {
+        height: 930vw;
+        background-position: top center;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(visuals/background_phone.svg);
+    }
+    .planetPinkYellow {
+        /* position: absolute; */
+        left: 4vw;
+        top: 24vw;
+        height: 20vw;
+    }
+    .planetYellowSmall_1 {
+        /* position: absolute; */
+        left: 20vw;
+        top: 110vw;
+        height: 6vw;
+    }
+    .planetYellow_1 {
+        /* position: absolute; */
+        left: 24vw;
+        top: 10vw;
+        height: 13vw;
+    }
+    .button_1 {
+        /* position: relative; */
+        top: 95vw;
+        left: -1vw;
+    }
+    .falling {
+        /* position: absolute; */
+        left: 3vw;
+        top: 85vw;
+        height: 15vw;
+    }
+    .planetYellowSmall_2 {
+        /* position: absolute; */
+        left: 25vw;
+        top: 51vw;
+        height: 3.5vw;
+    }
+    .planetBlueSmall_1 {
+        /* position: absolute; */
+        left: 32vw;
+        top: 40vw;
+        height: 7vw;
+    }
+    .skillsTitle {
+        margin-top: 345vw;
+    }
+    .sun {
+        /* position: absolute; */
+        right: 9vw;
+        top: 330vw;
+        height: 12vw;
+    }
+    .dolphin {
+        /* position: absolute; */
+        left: 3vw;
+        top: 410vw;
+        height: 15vw;
+    }
+    .planetBlue_v2 {
+        /* position: absolute; */
+        left: 7vw;
+        top: 58vw;
+        height: 13vw;
+    }
+    .planetBlueRings {
+        /* position: absolute; */
+        right: 2vw;
+        top: 40vw;
+        height: 21vw;
+    }
+    .planetYellow_v2 {
+        /* position: absolute; */
+        right: 12vw;
+        top: 97vw;
+        height: 13vw;
+    }
+    .planetPinkYellowSmall {
+        /* position: absolute; */
+        right: 20vw;
+        top: 25vw;
+        height: 8vw;
+    }
+    .planetPink_1 {
+        /* position: absolute; */
+        right: 25vw;
+        top: 127vw;
+        height: 14vw;
+    }
+    .planetYellow_2 {
+        /* position: absolute; */
+        right: 7vw;
+        top: 70vw;
+        height: 5vw;
+    }
+    .planetYellow_3 {
+        /* position: absolute; */
+        right: 8vw;
+        top: 17vw;
+        height: 5vw;
+    }
+    .planetPink_2 {
+        /* position: absolute; */
+        left: 87vw;
+        top: 87vw;
+        height: 7vw;
+    }
+    .planetBlueSmall_2 {
+        /* position: absolute; */
+        left: 30vw;
+        top: 145vw;
+        height: 10vw;
+    }
+    .purpleWhale {
+        /* position: absolute; */
+        left: 5vw;
+        top: 390vw;
+        height: 20vw;
+    }
+    .pinkFish_1 {
+        /* position: absolute; */
+        right: 2vw;
+        top: 472vw;
+        height: 12vw;
+    }
+    .yellowOctopus {
+        position: absolute;
+        left: 3vw;
+        top: -5vw;
+        height: 35vw;
+    }
+    .pinkOctopus {
+        position: absolute;
+        left: 75vw;
+        top: 28vw;
+        height: 22vw;
+    }
+    .blueWhale {
+        position: absolute;
+        right: 2vw;
+        top: 80vw;
+        height: 17vw;
+    }
+    .educationStyle {
+        position: unset;
+        font-size: 3vw;
+        /* font-weight: bold; */
+        word-wrap: break-word;
+        width: 60vw;
+    }
+    .experienceStyle {
+        position: unset;
+        font-size: 3vw;
+        /* font-weight: bolder; */
+        word-wrap: break-word;
+        width: 60vw;
+    }
+    .pinkFish_2 {
+        position: absolute;
+        left: 25vw;
+        top: -77vw;
+        height: 8vw;
+    }
+}
