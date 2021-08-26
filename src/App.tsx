@@ -218,7 +218,7 @@ function App() {
                 </motion.svg>
               </div>
               :
-              <div style={{margin: 'auto', marginTop: '20vw' }}>
+              <div style={{ margin: 'auto', marginTop: '20vw' }}>
                 <motion.svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="-350 0 1700 66.91"
@@ -338,7 +338,8 @@ function App() {
           duration: 2
         }}
       >
-        <Button className={style.button} variant='outlined' onClick={e => scroller.scrollTo('skills', { duration: 2000, smooth: 'easeInOutQuint', offset: -1 * window.innerHeight / 3 })}>skills</Button>
+        {/* <Button className={style.button} variant='outlined' onClick={e => scroller.scrollTo('skills', { duration: 2000, smooth: 'easeInOutQuint', offset: -1 * window.innerHeight / 3 })}>skills</Button> */}
+        <Button className={style.button} variant='outlined' onClick={e => scroller.scrollTo('skills', { duration: 2000, smooth: 'easeInOutQuint', offset: window.innerWidth > 420 && window.innerWidth <= 1024 ? (-1 * window.innerHeight / 2.6) : (-1 * window.innerHeight / 3) })}>skills</Button>
       </motion.div>
 
       {/* -----------------------------SKILLS---------------------------------- */}
@@ -346,8 +347,8 @@ function App() {
       <div style={{ pointerEvents: 'none' }} >
         <Element name='skills'>
           <div className='skillsTitle'>
-            <h1 style={{ position: 'relative', fontSize: window.innerWidth > 420 ? '5vw' : '13vw', letterSpacing: '0.2em', color: 'rgb(248, 163, 28)', textTransform: 'uppercase' }} className='skillsTitle'>Skills</h1>
-            <h3 style={{ position: 'relative', fontSize: window.innerWidth > 420 ? '1.2vw' : '3vw', letterSpacing: '0.45em', top: window.innerWidth > 420 ? '-3vw' : '-7vw', color: 'rgb(248, 163, 28)', textTransform: 'uppercase' }} >(besides googling)</h3>
+            <h1 style={{ position: 'relative', fontSize: window.innerWidth <= 420 ? '13vw' : window.innerWidth <= 1024 ? '9vw' : '5vw', letterSpacing: '0.2em', color: 'rgb(248, 163, 28)', textTransform: 'uppercase' }} className='skillsTitle'>Skills</h1>
+            <h3 style={{ position: 'relative', fontSize: window.innerWidth <= 420 ? '3vw' : window.innerWidth <= 1024 ? '2.2vw' : '1.2vw', letterSpacing: '0.45em', top: window.innerWidth <= 420 ? '-7vw' : window.innerWidth <= 1024 ? '-5vw' : '-3vw', color: 'rgb(248, 163, 28)', textTransform: 'uppercase' }} >(besides googling)</h3>
           </div>
 
           <motion.img alt="dolphin" src={dolphin}
@@ -369,7 +370,8 @@ function App() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        <Button className={style.seeListButton} variant='outlined' onClick={e => scroller.scrollTo('skills_list', { duration: 2000, smooth: 'easeInOutQuint', offset: window.innerWidth > 420 ? (-1 * window.innerHeight / 6) : (-1 * window.innerHeight / 3.5) })}>see list</Button>
+        {/* <Button className={style.seeListButton} variant='outlined' onClick={e => scroller.scrollTo('skills_list', { duration: 2000, smooth: 'easeInOutQuint', offset: window.innerWidth > 420 ? (-1 * window.innerHeight / 6) : (-1 * window.innerHeight / 3.5) })}>see list</Button> */}
+        <Button className={style.seeListButton} variant='outlined' onClick={e => scroller.scrollTo('skills_list', { duration: 2000, smooth: 'easeInOutQuint', offset: window.innerWidth <= 420 ? (-1 * window.innerHeight / 3.5) : window.innerWidth <= 1024 ? (-1 * window.innerHeight / 4.7) : (-1 * window.innerHeight / 6) })}>see list</Button>
 
       </motion.div>
 
@@ -461,25 +463,25 @@ function App() {
 
       {/* -----------------------------OTHER DETAILS---------------------------------- */}
 
-      <div style={{ marginTop: window.innerWidth > 420 ? '47vw' : '110vw', display: 'grid', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ marginTop: window.innerWidth <= 420 ? '110vw': window.innerWidth <= 1024 ? '55vw': '43vw', display: 'grid', justifyContent: 'center', alignItems: 'center' }}>
 
         <div className='educationStyle'>
-          <p style={{ left: '7vw', color: window.innerWidth > 420 ? 'rgb(248, 128, 21)' : 'white', textDecorationLine: 'underline' }}>EDUCATION</p>
-          <p style={{ color: window.innerWidth > 420 ? 'rgb(248, 128, 21)' : 'white', top: '2vw' }}>Master's Degree in Software Engineering at UBB, 2021-2023</p>
-          <p style={{ color: window.innerWidth > 420 ? 'rgb(248, 128, 21)' : 'white', top: '2vw' }}>Bachelor's Degree in Computer Science at TUCN, 2017-2021</p>
-          <p style={{ color: window.innerWidth > 420 ? 'rgb(248, 128, 21)' : 'white', top: '2vw' }}>Matematica - Informatica at Colegiul National "Emil Racovita"</p>
+          <p style={{ color: window.innerWidth > 1024 ? 'rgb(248, 128, 21)' : 'white', textDecorationLine: 'underline' }}>EDUCATION</p>
+          <p style={{ color: window.innerWidth > 1024 ? 'rgb(248, 128, 21)' : 'white', top: '2vw' }}>Master's Degree in Software Engineering at UBB, 2021-2023</p>
+          <p style={{ color: window.innerWidth > 1024 ? 'rgb(248, 128, 21)' : 'white', top: '2vw' }}>Bachelor's Degree in Computer Science at TUCN, 2017-2021</p>
+          <p style={{ color: window.innerWidth > 1024 ? 'rgb(248, 128, 21)' : 'white', top: '2vw' }}>Matematica - Informatica at Colegiul National "Emil Racovita"</p>
         </div>
 
         <div className='experienceStyle'>
-          <p style={{ color: window.innerWidth > 420 ? 'rgb(248, 128, 21)' : 'white', textDecorationLine: 'underline' }}>EXPERIENCE</p>
-          <p style={{ color: window.innerWidth > 420 ? 'rgb(248, 128, 21)' : 'white', top: '2vw' }}>Internship at .msg systems on React with Typescript, summer of 2020</p>
+          <p style={{ color: window.innerWidth > 1024 ? 'rgb(248, 128, 21)' : 'white', textDecorationLine: 'underline' }}>EXPERIENCE</p>
+          <p style={{ color: window.innerWidth > 1024 ? 'rgb(248, 128, 21)' : 'white', top: '2vw' }}>Internship at .msg systems on React with Typescript, summer of 2020</p>
           <Button className={style.githubButton} variant='outlined' onClick={e => window.open('https://github.com/Ioniqe', '_blank')}>github</Button>
         </div>
 
       </div>
 
 
-    </div>
+    </div >
   );
 }
 

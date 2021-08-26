@@ -28,13 +28,6 @@ body::-webkit-scrollbar {
     background-image: url(visuals/background2.svg);
 }
 
-
-/* .title {
-    width: 55vw;
-    margin: auto;
-    margin-top: 20vw;
-} */
-
 .planetPinkYellow {
     position: absolute;
     left: 9vw;
@@ -236,6 +229,141 @@ body::-webkit-scrollbar {
         background-size: cover;
         background-image: url(visuals/background_tablet.svg);
     }
+    .planetPinkYellow {
+        left: 5vw;
+        top: 32vw;
+        height: 16vw;
+    }
+    .planetYellowSmall_1 {
+        left: 20vw;
+        top: 110vw;
+        height: 9vw;
+    }
+    .planetYellow_1 {
+        left: 26vw;
+        top: 22vw;
+        height: 9vw;
+    }
+    .button_1 {
+        top: 68vw;
+    }
+    .falling {
+        left: 5vw;
+        top: 66vw;
+        height: 13vw;
+    }
+    .planetYellowSmall_2 {
+        left: 21vw;
+        top: 48vw;
+        height: 4vw;
+    }
+    .planetBlueSmall_1 {
+        left: 32vw;
+        top: 39vw;
+        height: 8vw;
+    }
+    .skillsTitle {
+        margin-top: 200vw;
+    }
+    .sun {
+        right: 9vw;
+        top: 194vw;
+        height: 10vw;
+    }
+    .dolphin {
+        left: 2vw;
+        top: 240vw;
+        height: 13vw;
+    }
+    .planetBlue_v2 {
+        left: 3vw;
+        top: 55vw;
+        height: 7vw;
+    }
+    .planetBlueRings {
+        right: 2vw;
+        top: 38vw;
+        height: 15vw;
+    }
+    .planetYellow_v2 {
+        right: 12vw;
+        top: 85vw;
+        height: 12vw;
+    }
+    .planetPinkYellowSmall {
+        right: 20vw;
+        top: 17vw;
+        height: 10vw;
+    }
+    .planetPink_1 {
+        right: 30vw;
+        top: 100vw;
+        height: 9vw;
+    }
+    .planetYellow_2 {
+        right: 3vw;
+        top: 60vw;
+        height: 5vw;
+    }
+    .planetYellow_3 {
+        right: 26vw;
+        top: 32vw;
+        height: 5vw;
+    }
+    .planetPink_2 {
+        left: 70vw;
+        top: 70vw;
+        height: 4vw;
+    }
+    .planetBlueSmall_2 {
+        left: 30vw;
+        top: 85vw;
+        height: 5vw;
+    }
+    .pinkFish_1 {
+        right: 2vw;
+        top: 195vw;
+        height: 12vw;
+    }
+    .pinkFish_2 {
+        left: 10vw;
+        top: -80vw;
+        height: 15vw;
+    }
+    .yellowOctopus {
+        left: 3vw;
+        top: -4vw;
+        height: 27vw;
+    }
+    .pinkOctopus {
+        left: 23vw;
+        top: 15vw;
+        height: 16vw;
+    }
+    .purpleWhale {
+        left: 65vw;
+        top: 245vw;
+        height: 15vw;
+    }
+    .blueWhale {
+        right: 2vw;
+        top: 70vw;
+        height: 15vw;
+    }
+    .educationStyle {
+        position: unset;
+        font-size: 2vw;
+        font-weight: 10;
+        word-wrap: break-word;
+        width: 50vw;
+    }
+    .experienceStyle {
+        position: unset;
+        font-size: 2vw;
+        font-weight: 10;
+        word-wrap: break-word;
+        width: 50vw;
+    }
 }
 
 @media only screen and (max-width: 420px) {
@@ -248,42 +376,35 @@ body::-webkit-scrollbar {
         background-image: url(visuals/background_phone.svg);
     }
     .planetPinkYellow {
-        /* position: absolute; */
         left: 4vw;
         top: 24vw;
         height: 20vw;
     }
     .planetYellowSmall_1 {
-        /* position: absolute; */
         left: 20vw;
         top: 110vw;
         height: 6vw;
     }
     .planetYellow_1 {
-        /* position: absolute; */
         left: 24vw;
         top: 10vw;
         height: 13vw;
     }
     .button_1 {
-        /* position: relative; */
         top: 95vw;
         left: -1vw;
     }
     .falling {
-        /* position: absolute; */
         left: 3vw;
         top: 85vw;
         height: 15vw;
     }
     .planetYellowSmall_2 {
-        /* position: absolute; */
         left: 25vw;
         top: 51vw;
         height: 3.5vw;
     }
     .planetBlueSmall_1 {
-        /* position: absolute; */
         left: 32vw;
         top: 40vw;
         height: 7vw;
@@ -292,119 +413,103 @@ body::-webkit-scrollbar {
         margin-top: 345vw;
     }
     .sun {
-        /* position: absolute; */
         right: 9vw;
         top: 330vw;
         height: 12vw;
     }
     .dolphin {
-        /* position: absolute; */
         left: 3vw;
         top: 410vw;
         height: 15vw;
     }
     .planetBlue_v2 {
-        /* position: absolute; */
         left: 7vw;
         top: 58vw;
         height: 13vw;
     }
     .planetBlueRings {
-        /* position: absolute; */
         right: 2vw;
         top: 40vw;
         height: 21vw;
     }
     .planetYellow_v2 {
-        /* position: absolute; */
         right: 12vw;
         top: 97vw;
         height: 13vw;
     }
     .planetPinkYellowSmall {
-        /* position: absolute; */
         right: 20vw;
         top: 25vw;
         height: 8vw;
     }
     .planetPink_1 {
-        /* position: absolute; */
         right: 25vw;
         top: 127vw;
         height: 14vw;
     }
     .planetYellow_2 {
-        /* position: absolute; */
         right: 5vw;
         top: 70vw;
         height: 5vw;
     }
     .planetYellow_3 {
-        /* position: absolute; */
         right: 8vw;
         top: 17vw;
         height: 5vw;
     }
     .planetPink_2 {
-        /* position: absolute; */
         left: 90vw;
         top: 87vw;
         height: 7vw;
     }
     .planetBlueSmall_2 {
-        /* position: absolute; */
         left: 30vw;
         top: 145vw;
         height: 10vw;
     }
     .purpleWhale {
-        /* position: absolute; */
         left: 5vw;
         top: 390vw;
         height: 20vw;
     }
     .pinkFish_1 {
-        /* position: absolute; */
         right: 2vw;
         top: 472vw;
         height: 12vw;
     }
     .yellowOctopus {
-        position: absolute;
         left: 3vw;
         top: -5vw;
         height: 35vw;
     }
     .pinkOctopus {
-        position: absolute;
         left: 75vw;
         top: 28vw;
         height: 22vw;
     }
     .blueWhale {
-        position: absolute;
-        right: 2vw;
-        top: 80vw;
-        height: 17vw;
+        left: 23vw;
+        top: 70vw;
+        height: 19vw;
     }
     .educationStyle {
         position: unset;
         font-size: 3vw;
-        /* font-weight: bold; */
+        font-weight: 10;
         word-wrap: break-word;
         width: 60vw;
     }
     .experienceStyle {
         position: unset;
         font-size: 3vw;
-        /* font-weight: bolder; */
+        font-weight: 10;
         word-wrap: break-word;
         width: 60vw;
     }
     .pinkFish_2 {
         position: absolute;
         left: 25vw;
-        top: -77vw;
+        top: -84vw;
         height: 8vw;
     }
 }
