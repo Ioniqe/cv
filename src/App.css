@@ -28,11 +28,12 @@ body::-webkit-scrollbar {
     background-image: url(visuals/background2.svg);
 }
 
-.title {
+
+/* .title {
     width: 55vw;
     margin: auto;
     margin-top: 20vw;
-}
+} */
 
 .planetPinkYellow {
     position: absolute;
@@ -70,7 +71,7 @@ body::-webkit-scrollbar {
 
 .planetYellowSmall_2 {
     position: absolute;
-    left: 19vw;
+    left: 18vw;
     top: 20vw;
     height: 2vw;
 }
@@ -123,7 +124,7 @@ body::-webkit-scrollbar {
 
 .planetPinkYellowSmall {
     position: absolute;
-    right: 7vw;
+    right: 5vw;
     top: 28vw;
     height: 6vw;
 }
@@ -137,7 +138,7 @@ body::-webkit-scrollbar {
 
 .planetYellow_2 {
     position: absolute;
-    right: 15vw;
+    right: 12vw;
     top: 23vw;
     height: 3vw;
 }
@@ -334,7 +335,7 @@ body::-webkit-scrollbar {
     }
     .planetYellow_2 {
         /* position: absolute; */
-        right: 7vw;
+        right: 5vw;
         top: 70vw;
         height: 5vw;
     }
@@ -346,7 +347,7 @@ body::-webkit-scrollbar {
     }
     .planetPink_2 {
         /* position: absolute; */
-        left: 87vw;
+        left: 90vw;
         top: 87vw;
         height: 7vw;
     }

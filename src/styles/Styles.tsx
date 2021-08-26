@@ -2,6 +2,7 @@ import { makeStyles } from "@material-ui/core";
 
 export const useStylesGeneral = makeStyles((theme) => ({
   button: {
+    marginTop: '5vw',
     width: '11%',
     fontFamily: 'Arial',
     fontSize: '1.1vw',
