@@ -463,7 +463,7 @@ function App() {
 
       {/* -----------------------------OTHER DETAILS---------------------------------- */}
 
-      <div style={{ marginTop: window.innerWidth <= 420 ? '110vw': window.innerWidth <= 1024 ? '55vw': '43vw', display: 'grid', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ marginTop: window.innerWidth <= 420 ? '110vw' : window.innerWidth <= 1024 ? '55vw' : '43vw', display: 'grid', justifyContent: 'center', alignItems: 'center' }}>
 
         <div className='educationStyle'>
           <p style={{ color: window.innerWidth > 1024 ? 'rgb(248, 128, 21)' : 'white', textDecorationLine: 'underline' }}>EDUCATION</p>

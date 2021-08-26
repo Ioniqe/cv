@@ -16,16 +16,12 @@ body::-webkit-scrollbar {
 }
 
 .headerr {
-    /* background-image: url(visuals/background2.svg); */
-    /* background-repeat: no-repeat; */
-    /* background-position: top; */
-    /* background-size: cover; */
     height: 310vw;
     background-position: top center;
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(visuals/background2.svg);
+    background-image: url(visuals/background.svg);
 }
 
 .planetPinkYellow {
