@@ -1,1 +1,1 @@
-web: node ./src/index.tsx --timeout 10
+web: node index.tsx
