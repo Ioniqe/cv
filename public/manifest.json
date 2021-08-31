@@ -2,7 +2,7 @@
     "short_name": "Ioana Bozdog",
     "name": "Ioana Bozdog CV",
     "icons": [{
-            "src": "favicon.ico",
+            "src": "planet_yellow.ico",
             "sizes": "64x64 32x32 24x24 16x16",
             "type": "image/x-icon"
         },
