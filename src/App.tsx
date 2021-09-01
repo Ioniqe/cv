@@ -338,7 +338,6 @@ function App() {
           duration: 2
         }}
       >
-        {/* <Button className={style.button} variant='outlined' onClick={e => scroller.scrollTo('skills', { duration: 2000, smooth: 'easeInOutQuint', offset: -1 * window.innerHeight / 3 })}>skills</Button> */}
         <Button className={style.button} variant='outlined' onClick={e => scroller.scrollTo('skills', { duration: 2000, smooth: 'easeInOutQuint', offset: window.innerWidth > 420 && window.innerWidth <= 1024 ? (-1 * window.innerHeight / 2.6) : (-1 * window.innerHeight / 3) })}>skills</Button>
       </motion.div>
 
@@ -370,7 +369,6 @@ function App() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        {/* <Button className={style.seeListButton} variant='outlined' onClick={e => scroller.scrollTo('skills_list', { duration: 2000, smooth: 'easeInOutQuint', offset: window.innerWidth > 420 ? (-1 * window.innerHeight / 6) : (-1 * window.innerHeight / 3.5) })}>see list</Button> */}
         <Button className={style.seeListButton} variant='outlined' onClick={e => scroller.scrollTo('skills_list', { duration: 2000, smooth: 'easeInOutQuint', offset: window.innerWidth <= 420 ? (-1 * window.innerHeight / 3.5) : window.innerWidth <= 1024 ? (-1 * window.innerHeight / 4.7) : (-1 * window.innerHeight / 6) })}>see list</Button>
 
       </motion.div>
@@ -486,6 +484,3 @@ function App() {
 }
 
 export default App;
-
-
-//TODO put an informative bubble with animation to inform user that the coin can be clicked / hovered on
